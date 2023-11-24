@@ -14,6 +14,8 @@ public class Bot extends ListenerAdapter {
         // Create the bot
         JDABuilder builder = JDABuilder.createDefault("BOT_TOKEN");
 
+        builder.addEventListeners(new Bot());
+
         // Disable some cache features
         builder.disableCache(CacheFlag.MEMBER_OVERRIDES, CacheFlag.VOICE_STATE);
 
